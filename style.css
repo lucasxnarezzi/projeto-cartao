@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #999;
+}
+
+.container {
+   height: 40vh;
+   width: 80vh;
+   background-color: lightgreen;
+   position: relative;
+}
+
+/* Estilo da bolinha */
+.ball {
+    width: 20px; /* Largura da bolinha */
+    height: 20px; /* Altura da bolinha */
+    background-color: red; /* Cor da bolinha */
+    border-radius: 50%; /* Faz a bolinha ficar redonda */
+    position: absolute; /* Para posicionar a bolinha */
+    animation: moveBall 2s linear infinite; /* Animação */
+}
+
+/* Keyframes para a animação da bolinha */
+@keyframes moveBall {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    25% {
+        top: 0;
+        left: calc(100% - 40px);
+    }
+    50% {
+        top: calc(100% - 20px);
+        left: calc(100% - 20px);
+    }
+    75% {
+        top: calc(100% - 20px);
+        left: 0;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
