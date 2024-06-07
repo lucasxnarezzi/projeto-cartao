@@ -4,46 +4,52 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #999;
+    background-color: #555;
 }
 
 .container {
-   height: 40vh;
-   width: 80vh;
-   background-color: lightgreen;
-   position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 30vh;
+    width: 40vh;
+    color: #888;
+    background: linear-gradient(45deg, #555, #777);
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    align-content: center;
 }
 
-/* Estilo da bolinha */
-.ball {
-    width: 20px; /* Largura da bolinha */
-    height: 20px; /* Altura da bolinha */
-    background-color: red; /* Cor da bolinha */
-    border-radius: 50%; /* Faz a bolinha ficar redonda */
-    position: absolute; /* Para posicionar a bolinha */
-    animation: moveBall 2s linear infinite; /* Animação */
+    
+.dot {
+    width: 10px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: rgba(200, 200, 200, 0.4);
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    animation: move 5s infinite;
 }
 
-/* Keyframes para a animação da bolinha */
-@keyframes moveBall {
-    0% {
-        top: 0;
-        left: 0;
-    }
+@keyframes move {
+    0%,100% {
+        top: 10%;
+        right: 10%;
+    }    
     25% {
-        top: 0;
-        left: calc(100% - 40px);
+        top: 10%;
+        right: calc(100% - 30px);
     }
     50% {
-        top: calc(100% - 20px);
-        left: calc(100% - 20px);
+        top: calc(100% - 30px);
+        right: calc(100% - 30px);
     }
     75% {
-        top: calc(100% - 20px);
-        left: 0;
-    }
-    100% {
-        top: 0;
-        left: 0;
+        top: calc(100% - 30px);
+        right: 10%;
     }
 }
